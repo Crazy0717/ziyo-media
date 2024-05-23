@@ -1,0 +1,13 @@
+.background {
+  display: none;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #024f1380;
+  backdrop-filter: blur(4px);
+
+  &.active {
+    display: inline-block;
+  }
+}
