@@ -16,22 +16,21 @@
       filter: invert(100%);
     }
     .icon:has(.svg) {
-      padding: 4px;
+      padding: 0px;
     }
   }
   .icon {
     min-width: 32px;
-    min-height: 32px;
-    padding: 8px 0;
+    padding: 6px 0;
     border-radius: 8px;
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.2s;
 
     &:has(.svg) {
-      padding: 4px;
+      padding: 1px;
     }
   }
   p {

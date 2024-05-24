@@ -1,5 +1,5 @@
 @use "../../constants/variables" as *;
-$padding-y: 15px;
+$padding-y: 0px;
 
 nav {
   padding: 0px 100px;
@@ -7,7 +7,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   color: $textColor;
-
+  background-color: #fff;
   .left {
     display: flex;
     align-items: center;
@@ -22,7 +22,7 @@ nav {
     display: flex;
     gap: 22px;
     img {
-      width: 46px;
+      width: 36px;
     }
     &_name {
       h2 {
@@ -39,7 +39,7 @@ nav {
     }
   }
   ul {
-    padding-top: 8px;
+    padding-top: 5px;
     display: flex;
     gap: 18px;
   }
@@ -52,11 +52,11 @@ nav {
       flex-direction: column;
       align-items: center;
       gap: 4px;
-      font-size: 30px;
+      font-size: 26px;
       p {
         display: flex;
         gap: 4px;
-        font-size: 16px;
+        font-size: 13px;
         font-weight: 400;
         line-height: 23.12px;
         span {
@@ -74,9 +74,10 @@ nav {
       flex-direction: column;
       align-items: center;
       gap: 4px;
-      font-size: 28px;
+      font-size: 25px;
+      cursor: pointer;
       p {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 400;
         line-height: 23.12px;
       }
@@ -86,7 +87,7 @@ nav {
 
 @media screen and (width < 480px) {
   nav {
-    padding: 0px 22px;
+    padding: 2px 22px;
 
     .left {
       gap: 22px;

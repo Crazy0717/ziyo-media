@@ -12,6 +12,7 @@
   background-color: #fff;
   border-radius: 0 0 12px 0;
   transition: 0.4s;
+  z-index: 3;
   &.active {
     left: 0;
   }

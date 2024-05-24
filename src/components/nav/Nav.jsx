@@ -10,23 +10,24 @@ import { LuUserSquare } from "react-icons/lu"
 import { LiaHandshake } from "react-icons/lia"
 import { TiGlobeOutline } from "react-icons/ti"
 import { RxMagnifyingGlass } from "react-icons/rx"
-import BarsBlock from "../bars-block/BarsBlock"
 import { useDispatch } from "react-redux"
 import { enableSomeThing } from "../../redux/slices/states"
+import { BarsBlock, SearchBar } from ".."
 
 const Nav = () => {
   const dispatch = useDispatch()
 
-  const openBars = () => {
+  const active = (stateName) => {
     dispatch(enableSomeThing("backgroundState"))
-    dispatch(enableSomeThing("barsState"))
+    dispatch(enableSomeThing(stateName))
   }
 
   return (
     <nav>
       <BarsBlock />
+      <SearchBar />
       <div className="left">
-        <div onClick={openBars} className="bars">
+        <div onClick={() => active("barsState")} className="bars">
           <HiBars3 />
         </div>
         <div className="logo">
@@ -90,7 +91,7 @@ const Nav = () => {
             <b id="current">UZ</b> <span>|</span> RU <span>|</span> ENG
           </p>
         </div>
-        <div className="search">
+        <div onClick={() => active("searchState")} className="search">
           <RxMagnifyingGlass />
           <p>Qidiruv</p>
         </div>

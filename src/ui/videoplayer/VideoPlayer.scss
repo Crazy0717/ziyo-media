@@ -1,0 +1,112 @@
+@use "../../constants/variables" as *;
+
+.videoPlayer {
+  width: 550px;
+  height: 310px;
+  position: relative;
+  iframe {
+    width: 550px;
+    height: 310px;
+    max-width: 600px;
+    border-radius: 12px;
+  }
+  .play-block {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    font-size: 26px;
+    background-color: rgba(0, 0, 0, 0.532);
+    cursor: pointer;
+    &.active {
+      display: flex;
+    }
+    .play-button {
+      margin-bottom: 0px;
+      width: 74px;
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: $primary;
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (width < 480px) {
+  .videoPlayer {
+    width: 85%;
+    height: 230px;
+    border-radius: 12px;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    .player {
+      width: 100vw !important;
+
+      iframe {
+        width: 90vw;
+        height: 230px;
+      }
+    }
+    .play-block {
+      .play-button {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media screen and (480px < width < 800px) {
+  .videoPlayer {
+    width: 85%;
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    .player {
+      width: 100vw !important;
+      iframe {
+        width: 90vw;
+        height: 280px;
+      }
+    }
+    .play-block {
+      .play-button {
+        width: 60px;
+        height: 60px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media screen and (800px < width < 1000px) {
+  .videoPlayer {
+    width: 430px;
+    overflow: hidden;
+    iframe {
+      width: 550px;
+      height: 310px;
+      max-width: 430px;
+    }
+  }
+}
+@media screen and (1000px < width < 1200px) {
+  .videoPlayer {
+    width: 450px;
+    overflow: hidden;
+    iframe {
+      width: 550px;
+      height: 310px;
+      max-width: 450px;
+    }
+  }
+}

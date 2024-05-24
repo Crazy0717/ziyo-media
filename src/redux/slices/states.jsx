@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit"
 const initialState = {
   backgroundState: false,
   barsState: false,
+  searchState: false,
 }
 
 export const counterSlice = createSlice({
@@ -19,6 +20,7 @@ export const counterSlice = createSlice({
     disablEveryThing: (state) => {
       state.backgroundState = false
       state.barsState = false
+      state.searchState = false
     },
   },
 })

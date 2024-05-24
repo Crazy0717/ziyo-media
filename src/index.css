@@ -13,3 +13,18 @@
   margin: 0 auto;
   overflow-x: hidden;
 }
+
+html {
+  background-color: #f5f5f5;
+}
+
+body.modal-open {
+  overflow: hidden;
+  padding-right: 17px;
+}
+
+@media screen and (width < 1200px) {
+  body.modal-open {
+    padding-right: 0.07vw;
+  }
+}
