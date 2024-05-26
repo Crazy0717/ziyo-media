@@ -1,10 +1,18 @@
 import "./Home.scss"
-import { Navigation, Scrollbar, A11y } from "swiper/modules"
+import { Navigation, A11y } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import { IoIosArrowBack } from "react-icons/io"
 import { VideoPlayer } from "../../ui"
+import {
+  AdSlider,
+  ContactUs,
+  NewsBlock,
+  PartnersSlider,
+  QuadSlider,
+  RadioSlider,
+} from "../../components"
 
 const Home = () => {
   return (
@@ -19,7 +27,7 @@ const Home = () => {
           </button>
         </div>
         <Swiper
-          modules={[Navigation, Scrollbar, A11y]}
+          modules={[Navigation, A11y]}
           spaceBetween={50}
           slidesPerView={1}
           navigation={{ nextEl: ".next.btn", prevEl: ".prev.btn" }}
@@ -45,7 +53,7 @@ const Home = () => {
               <button>Batafsil</button>
             </div>
             <div className="right">
-              <VideoPlayer videoUrl="https://www.youtube.com/watch?v=HO-r634Sq98&t=1s" />
+              <VideoPlayer videoUrl="https://www.youtube-nocookie.com/embed/HO-r634Sq98?si=qIE5yRGBev1AwOAc" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -59,7 +67,7 @@ const Home = () => {
               <button>Batafsil</button>
             </div>
             <div className="right">
-              <VideoPlayer videoUrl="https://www.youtube.com/watch?v=lppnmJDlAVg" />
+              <VideoPlayer videoUrl="https://www.youtube-nocookie.com/embed/lppnmJDlAVg?si=r1JJzsp5f5m3Pvox" />
             </div>
           </SwiperSlide>
         </Swiper>
@@ -90,6 +98,14 @@ const Home = () => {
           Fotolavhalar
         </div>
       </div>
+      <NewsBlock />
+      <QuadSlider ident="first" title="Imom al buxoriy saboqlari" />
+      <AdSlider />
+      <RadioSlider />
+      <QuadSlider ident="second" title="Qiziq bo’lishi mumkin" />
+      <QuadSlider ident="third" title="Audio maxsulotlar" />
+      <PartnersSlider />
+      <ContactUs />
     </div>
   )
 }

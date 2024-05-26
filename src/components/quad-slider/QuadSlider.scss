@@ -1,0 +1,175 @@
+@use "../../constants/variables" as *;
+
+.quadSlider {
+  padding: 60px 100px 0 100px;
+  position: relative;
+}
+.quadSlider_top {
+  display: flex;
+  justify-content: space-between;
+  color: $textColor;
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 46.24px;
+  }
+  button {
+    padding: 10px 18px;
+    border: 1px solid $primary;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.12px;
+    background-color: transparent;
+    transition: $transitionDuration;
+    cursor: pointer;
+    &:hover {
+      background-color: $primaryHover;
+      color: #fff;
+    }
+    &:active {
+      background-color: $primaryClicked;
+    }
+  }
+}
+.quadSlider_content {
+  margin-top: 24px;
+
+  .buttons {
+    height: 1px;
+    width: 89.5%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 75px;
+    z-index: 2;
+    max-width: 1440px;
+    .btn {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      background-color: $primary;
+      border-radius: 50%;
+      transition: 0.1s;
+      cursor: pointer;
+      z-index: 5;
+      outline: 3px solid #fff;
+      &:hover {
+        background-color: $primaryHover;
+      }
+      &:active {
+        background-color: $primaryClicked;
+      }
+    }
+    .quadSlider_next {
+      transform: rotate(180deg);
+    }
+  }
+  .swiper {
+    border-radius: 12px;
+  }
+}
+
+@media screen and (width < 480px) {
+  .quadSlider {
+    padding: 40px 22px;
+  }
+  .quadSlider_top {
+    h2 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    button {
+      padding: 8px 16px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+  .quadSlider_content {
+    .buttons {
+      width: 96.5%;
+      left: 2vw;
+      .btn {
+        width: 30px;
+        height: 30px;
+        outline: 2px solid #fff;
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media screen and (480px < width < 800px) {
+  .quadSlider {
+    padding: 40px 24px;
+  }
+  .quadSlider_top {
+    h2 {
+      font-size: 26px;
+      line-height: 28px;
+    }
+    button {
+      padding: 8px 16px;
+    }
+  }
+  .quadSlider_content {
+    .buttons {
+      width: 96.5%;
+      left: 2vw;
+      .btn {
+        width: 38px;
+        height: 38px;
+        outline: 2px solid #fff;
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media screen and (800px < width < 1000px) {
+  .quadSlider {
+    padding: 40px 26px;
+  }
+  .quadSlider_top {
+    h2 {
+      font-size: 28px;
+      line-height: 30px;
+    }
+    button {
+      padding: 8px 16px;
+    }
+  }
+  .quadSlider_content {
+    .buttons {
+      width: 96.5%;
+      left: 2vw;
+      .btn {
+        width: 42px;
+        height: 42px;
+        outline: 2px solid #fff;
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media screen and (1000px < width < 1200px) {
+  .quadSlider {
+    padding: 50px 60px;
+  }
+  .quadSlider_content {
+    .buttons {
+      width: 91.5%;
+      left: 4.2vw;
+      .btn {
+        width: 42px;
+        height: 42px;
+        outline: 2px solid #fff;
+        font-size: 14px;
+      }
+    }
+  }
+}

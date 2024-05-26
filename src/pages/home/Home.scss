@@ -69,6 +69,10 @@ header {
         font-weight: 700;
         line-height: 52.02px;
         color: $textColor;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
       }
       button {
         margin-top: 30px;

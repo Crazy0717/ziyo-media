@@ -1,0 +1,98 @@
+@use "../../constants/variables" as *;
+
+.newsBlock {
+  padding: 60px 100px;
+
+  &_top {
+    display: flex;
+    justify-content: space-between;
+    color: $textColor;
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 46.24px;
+    }
+    button {
+      padding: 10px 18px;
+      border: 1px solid $primary;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 23.12px;
+      background-color: transparent;
+      transition: $transitionDuration;
+      cursor: pointer;
+      &:hover {
+        background-color: $primaryHover;
+        color: #fff;
+      }
+      &:active {
+        background-color: $primaryClicked;
+      }
+    }
+  }
+  &_content {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 24px;
+  }
+}
+
+@media screen and (width < 480px) {
+  .newsBlock {
+    padding: 40px 22px;
+
+    &_top {
+      h2 {
+        font-size: 24px;
+        line-height: 28px;
+      }
+      button {
+        padding: 8px 16px;
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+    &_content {
+      margin-top: 18px;
+      row-gap: 12px;
+    }
+  }
+}
+@media screen and (480px < width < 800px) {
+  .newsBlock {
+    padding: 40px 24px;
+
+    &_top {
+      h2 {
+        font-size: 26px;
+        line-height: 28px;
+      }
+      button {
+        padding: 8px 16px;
+      }
+    }
+  }
+}
+@media screen and (800px < width < 1000px) {
+  .newsBlock {
+    padding: 40px 26px;
+
+    &_top {
+      h2 {
+        font-size: 28px;
+        line-height: 30px;
+      }
+      button {
+        padding: 8px 16px;
+      }
+    }
+  }
+}
+@media screen and (1000px < width < 1200px) {
+  .newsBlock {
+    padding: 60px;
+  }
+}
