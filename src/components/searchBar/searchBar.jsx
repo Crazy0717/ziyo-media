@@ -1,5 +1,5 @@
+import "./searchBar.scss"
 import { IoCloseOutline } from "react-icons/io5"
-import "./SearchBar.scss"
 import { RxMagnifyingGlass } from "react-icons/rx"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
