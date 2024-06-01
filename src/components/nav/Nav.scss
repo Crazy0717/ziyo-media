@@ -1,7 +1,7 @@
 @use "../../constants/variables" as *;
 $padding-y: 0px;
 
-nav {
+.navbar {
   padding: 0px 100px;
   max-height: 90px;
   display: flex;
@@ -31,6 +31,7 @@ nav {
         font-size: 24px;
         font-weight: 450;
         line-height: 34.68px;
+        color: $textColor;
       }
       p {
         color: #00000080;
@@ -88,7 +89,7 @@ nav {
 }
 
 @media screen and (width < 480px) {
-  nav {
+  .navbar {
     padding: 2px 22px;
 
     .left {
@@ -130,7 +131,7 @@ nav {
   }
 }
 @media screen and (480px < width < 800px) {
-  nav {
+  .navbar {
     padding: 0px 24px;
 
     .left {
@@ -175,7 +176,7 @@ nav {
   }
 }
 @media screen and (800px < width < 1200px) {
-  nav {
+  .navbar {
     padding: 0px 26px;
 
     .left {
@@ -216,7 +217,7 @@ nav {
   }
 }
 @media screen and (1200px < width < 1400px) {
-  nav {
+  .navbar {
     padding: 0px 50px;
   }
 }

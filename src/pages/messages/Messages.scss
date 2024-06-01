@@ -1,0 +1,353 @@
+@use "../../constants/variables" as *;
+
+.messages {
+  padding: 30px 100px 60px 100px;
+  color: $textColor;
+  display: flex;
+  flex-direction: column;
+}
+.messages_top {
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 52.02px;
+  }
+}
+.messages_main {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.main_top {
+  display: flex;
+  justify-content: space-between;
+  .main_top_left {
+    width: 710px;
+    height: 480px;
+    .photoBox {
+      height: 100%;
+      width: 100%;
+      .photoBox_content {
+        height: 100%;
+      }
+    }
+  }
+  .main_top_right {
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    .articleBox {
+      padding: 18px;
+      .articleBox_left {
+        width: 170px;
+        height: 110px;
+      }
+      .articleBox_right {
+        max-width: 64%;
+        .right_main {
+          h6 {
+            font-size: 16px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            word-wrap: break-word;
+          }
+          p {
+            margin-top: 2px;
+            font-size: 14px;
+            line-height: 18px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            word-wrap: break-word;
+          }
+        }
+        .right_bottom {
+          gap: 0;
+          justify-content: space-between;
+          .bottom_stats {
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.messages_boxes {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  justify-content: space-between;
+  row-gap: 30px;
+  .primaryBox {
+    &_top {
+      span,
+      .time {
+        display: none;
+      }
+    }
+    .right_bottom {
+      gap: 0;
+      justify-content: space-between;
+    }
+  }
+}
+.messages .MuiPagination-root {
+  align-self: center;
+  margin-top: 30px;
+  .MuiPaginationItem-page {
+    border: 1px solid #e0e6e9;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.12px;
+    margin: 0 5px;
+    &.Mui-selected {
+      background-color: $primary;
+      color: #fff;
+    }
+    &:hover,
+    &.Mui-selected:hover {
+      background-color: $primaryHover;
+      color: #fff;
+    }
+    &:active,
+    &.Mui-selected:active {
+      background-color: $primaryClicked;
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (width < 480px) {
+  .messages {
+    padding: 34px 22px 40px 22px;
+  }
+  .messages_top {
+    h1 {
+      font-size: 24px;
+      line-height: 31px;
+    }
+  }
+  .main_top {
+    .main_top_left {
+      width: 100%;
+      height: auto;
+    }
+    .main_top_right {
+      display: none;
+    }
+  }
+  .messages_boxes {
+    margin-top: 18px;
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+    .primaryBox {
+      img {
+        max-width: 300px;
+      }
+      &:nth-child(n + 8) {
+        display: none;
+      }
+    }
+  }
+  .messages .MuiPagination-root {
+    .MuiPaginationItem-page {
+      font-size: 14px;
+      min-width: 0;
+      width: 30px;
+      margin: 0 1vw;
+    }
+  }
+}
+@media screen and (479px < width < 650px) {
+  .messages {
+    padding: 34px 24px 40px 24px;
+  }
+  .messages_top {
+    h1 {
+      font-size: 26px;
+      line-height: 31px;
+    }
+  }
+  .main_top {
+    .main_top_left {
+      width: 60%;
+      max-height: 250px;
+    }
+    .main_top_right {
+      width: 36%;
+      .articleBox {
+        width: 100%;
+        flex-direction: column;
+        padding: 8px;
+        gap: 8px;
+        &:nth-child(n + 2) {
+          display: none;
+        }
+        .articleBox_left {
+          width: 100%;
+        }
+
+        .articleBox_right {
+          max-width: 100%;
+          .right_bottom {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+  .messages_boxes {
+    margin-top: 16px;
+    grid-template-columns: repeat(2, 48%);
+    row-gap: 14px;
+    .primaryBox {
+      img {
+        max-width: 300px;
+      }
+      &:nth-child(n + 7) {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (649px < width < 900px) {
+  .messages {
+    padding: 34px 24px 40px 24px;
+  }
+  .messages_top {
+    h1 {
+      font-size: 26px;
+      line-height: 31px;
+    }
+  }
+  .main_top {
+    .main_top_left {
+      width: 60%;
+      max-height: 300px;
+    }
+    .main_top_right {
+      width: 36%;
+      .articleBox {
+        width: 100%;
+        flex-direction: column;
+        padding: 8px;
+        gap: 8px;
+        &:nth-child(n + 2) {
+          display: none;
+        }
+        .articleBox_left {
+          width: 100%;
+          height: auto;
+          max-width: 210px;
+        }
+
+        .articleBox_right {
+          max-width: 100%;
+          .right_bottom {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+  .messages_boxes {
+    margin-top: 16px;
+    grid-template-columns: repeat(3, 32%);
+    row-gap: 14px;
+    .primaryBox {
+      img {
+        max-width: 300px;
+      }
+      &:nth-child(n + 10) {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (899px < width < 1200px) {
+  .messages {
+    padding: 38px 60px 40px 60px;
+  }
+  .messages_top {
+    h1 {
+      font-size: 28px;
+    }
+  }
+  .main_top {
+    .main_top_left {
+      width: 60%;
+      max-height: 350px;
+    }
+    .main_top_right {
+      width: 36%;
+      .articleBox {
+        width: 100%;
+        flex-direction: column;
+        padding: 12px;
+        gap: 8px;
+        &:nth-child(n + 2) {
+          display: none;
+        }
+        .articleBox_left {
+          width: 100%;
+          height: auto;
+          max-width: 260px;
+          margin: 0 auto;
+        }
+
+        .articleBox_right {
+          max-width: 100%;
+          .right_bottom {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+  .messages_boxes {
+    margin-top: 16px;
+    row-gap: 14px;
+    .primaryBox {
+      img {
+        max-width: 300px;
+      }
+      &:nth-child(n + 13) {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (1200px < width < 1420px) {
+  .main_top {
+    justify-content: space-between;
+    .main_top_left {
+      width: 610px;
+      height: 430px;
+    }
+    .main_top_right {
+      width: 40%;
+      gap: 14px;
+      .articleBox {
+        width: 100%;
+        padding: 10px;
+        &_right {
+          padding: 10px 0 0 0;
+          max-width: 100%;
+          height: 100%;
+          .right_bottom {
+            margin-top: 4px;
+            gap: 30px;
+          }
+        }
+      }
+    }
+  }
+}

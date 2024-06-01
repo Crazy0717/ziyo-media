@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { ArticleBox } from "../../ui"
 import "./NewsBlock.scss"
 
@@ -6,7 +7,10 @@ const NewsBlock = () => {
     <div className="newsBlock">
       <div className="newsBlock_top">
         <h2>Xabarlar</h2>
-        <button>Barchasini ko’rish</button>
+
+        <Link to={"/messages"}>
+          <button>Barchasini ko’rish</button>
+        </Link>
       </div>
       <div className="newsBlock_content">
         <ArticleBox imagePath="/images/Rectangle 12.png" />

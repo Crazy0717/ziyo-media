@@ -4,6 +4,9 @@ const initialState = {
   backgroundState: false,
   barsState: false,
   searchState: false,
+  appealState: false,
+  videoSendState: false,
+  conditionsState: false,
 }
 
 export const counterSlice = createSlice({
@@ -21,6 +24,9 @@ export const counterSlice = createSlice({
       state.backgroundState = false
       state.barsState = false
       state.searchState = false
+      state.appealState = false
+      state.videoSendState = false
+      state.conditionsState = false
     },
   },
 })

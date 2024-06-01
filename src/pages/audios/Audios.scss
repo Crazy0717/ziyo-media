@@ -1,0 +1,82 @@
+@use "../../constants/variables" as *;
+
+.audios {
+  padding: 40px 100px 60px 100px;
+  color: $textColor;
+}
+.audios_top {
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 52.02px;
+  }
+}
+.audios_boxes {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(4, 23%);
+  justify-content: space-between;
+  row-gap: 24px;
+}
+
+@media screen and (width < 480px) {
+  .audios {
+    padding: 34px 22px 40px 22px;
+  }
+  .audios_top {
+    h1 {
+      font-size: 24px;
+      line-height: 31px;
+    }
+  }
+  .audios_boxes {
+    margin-top: 22px;
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+  }
+}
+@media screen and (479px < width < 650px) {
+  .audios {
+    padding: 34px 24px 40px 24px;
+  }
+  .audios_top {
+    h1 {
+      font-size: 26px;
+      line-height: 31px;
+    }
+  }
+  .audios_boxes {
+    margin-top: 22px;
+    grid-template-columns: repeat(2, 48%);
+    row-gap: 22px;
+  }
+}
+@media screen and (649px < width < 900px) {
+  .audios {
+    padding: 34px 24px 40px 24px;
+  }
+  .audios_top {
+    h1 {
+      font-size: 26px;
+      line-height: 31px;
+    }
+  }
+  .audios_boxes {
+    margin-top: 22px;
+    grid-template-columns: repeat(3, 32%);
+    row-gap: 22px;
+  }
+}
+@media screen and (899px < width < 1200px) {
+  .audios {
+    padding: 38px 60px 40px 60px;
+  }
+  .audios_top {
+    h1 {
+      font-size: 28px;
+    }
+  }
+  .audios_boxes {
+    grid-template-columns: repeat(4, 24%);
+  }
+}

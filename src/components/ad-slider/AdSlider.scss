@@ -8,7 +8,6 @@
     border-radius: 12px;
   }
 }
-
 .adSlider-slide {
   display: flex;
   justify-content: space-between;
@@ -49,6 +48,7 @@
         background-color: transparent;
         transition: $transitionDuration;
         cursor: pointer;
+        color: $textColor;
         &:hover {
           background-color: $primaryHover;
           color: #fff;

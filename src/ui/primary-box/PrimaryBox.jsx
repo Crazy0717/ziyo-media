@@ -1,11 +1,12 @@
 import { IoCalendarClearOutline, IoEyeOutline } from "react-icons/io5"
 import "./PrimaryBox.scss"
+import { Link } from "react-router-dom"
 
 const PrimaryBox = ({ data }) => {
   return (
-    <div className="primaryBox">
+    <Link to={data.link} className="primaryBox">
       <div className="primaryBox_top">
-        <span>{data.badge}</span>
+        <span>{data.badge} </span>
         <div className="time">{data.time}</div>
         <img src={data.imagePath} alt="there should be image" />
       </div>
@@ -26,7 +27,7 @@ const PrimaryBox = ({ data }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

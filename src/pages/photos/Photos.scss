@@ -1,0 +1,111 @@
+@use "../../constants/variables" as *;
+
+.photos {
+  padding: 40px 100px 60px 100px;
+  color: $textColor;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.photos_top {
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 52.02px;
+  }
+}
+.photos_boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  justify-content: space-between;
+  row-gap: 24px;
+}
+.photos .MuiPagination-root {
+  align-self: center;
+  margin-top: 30px;
+  .MuiPaginationItem-page {
+    border: 1px solid #e0e6e9;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.12px;
+    margin: 0 5px;
+    &.Mui-selected {
+      background-color: $primary;
+      color: #fff;
+    }
+    &:hover,
+    &.Mui-selected:hover {
+      background-color: $primaryHover;
+      color: #fff;
+    }
+    &:active,
+    &.Mui-selected:active {
+      background-color: $primaryClicked;
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (width < 480px) {
+  .photos {
+    padding: 34px 22px 40px 22px;
+  }
+  .photos_top {
+    h1 {
+      font-size: 24px;
+      line-height: 31px;
+    }
+  }
+  .photos_boxes {
+    margin-top: 22px;
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+  }
+}
+@media screen and (479px < width < 650px) {
+  .photos {
+    padding: 34px 24px 40px 24px;
+  }
+  .photos_top {
+    h1 {
+      font-size: 26px;
+      line-height: 31px;
+    }
+  }
+  .photos_boxes {
+    margin-top: 22px;
+    grid-template-columns: repeat(2, 48%);
+    row-gap: 22px;
+  }
+}
+@media screen and (649px < width < 900px) {
+  .photos {
+    padding: 34px 24px 40px 24px;
+  }
+  .photos_top {
+    h1 {
+      font-size: 26px;
+      line-height: 31px;
+    }
+  }
+  .photos_boxes {
+    margin-top: 22px;
+    grid-template-columns: repeat(3, 32%);
+    row-gap: 22px;
+  }
+}
+@media screen and (899px < width < 1200px) {
+  .photos {
+    padding: 38px 60px 40px 60px;
+  }
+  .photos_top {
+    h1 {
+      font-size: 28px;
+    }
+  }
+  .photos_boxes {
+    grid-template-columns: repeat(4, 24%);
+  }
+}

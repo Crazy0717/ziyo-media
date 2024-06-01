@@ -7,8 +7,17 @@ const VideoPlayer = ({ videoUrl }) => {
   const [isPlaying, setIsPlaying] = useState(false)
 
   return (
-    <div className="videoPlayer">
-      <ReactPlayer className="player" url={videoUrl} playing={isPlaying} />
+    <div
+      style={{ display: videoUrl ? "inline-block" : "none" }}
+      className="videoPlayer"
+    >
+      <ReactPlayer
+        width="100%"
+        height="100%"
+        className="player"
+        url={videoUrl}
+        playing={isPlaying}
+      />
       <div
         onClick={() => setIsPlaying(true)}
         className={!isPlaying ? "play-block active" : "play-block"}

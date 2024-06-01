@@ -1,13 +1,15 @@
 @use "../../constants/variables" as *;
 
 .videoPlayer {
-  width: 550px;
-  height: 310px;
+  width: 100%;
   position: relative;
+  padding-top: 64.25%; /* Player ratio: 100 / (1280 / 720) */
+  .player {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   iframe {
-    width: 550px;
-    height: 310px;
-    max-width: 600px;
     border-radius: 12px;
   }
   .play-block {
@@ -61,52 +63,6 @@
         height: 50px;
         font-size: 16px;
       }
-    }
-  }
-}
-@media screen and (480px < width < 800px) {
-  .videoPlayer {
-    width: 85%;
-    height: 280px;
-    border-radius: 12px;
-    overflow: hidden;
-    left: 50%;
-    transform: translateX(-50%);
-    .player {
-      width: 100vw !important;
-      iframe {
-        width: 90vw;
-        height: 280px;
-      }
-    }
-    .play-block {
-      .play-button {
-        width: 60px;
-        height: 60px;
-        font-size: 16px;
-      }
-    }
-  }
-}
-@media screen and (800px < width < 1000px) {
-  .videoPlayer {
-    width: 430px;
-    overflow: hidden;
-    iframe {
-      width: 550px;
-      height: 310px;
-      max-width: 430px;
-    }
-  }
-}
-@media screen and (1000px < width < 1200px) {
-  .videoPlayer {
-    width: 450px;
-    overflow: hidden;
-    iframe {
-      width: 550px;
-      height: 310px;
-      max-width: 450px;
     }
   }
 }

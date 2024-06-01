@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, A11y, EffectFade } from "swiper/modules"
 import { IoIosArrowBack } from "react-icons/io"
 import "swiper/css/effect-fade"
+import { Link } from "react-router-dom"
 
 const AdSlider = () => {
   return (
@@ -29,7 +30,9 @@ const AdSlider = () => {
               type and scrambled it to make a type specimen book.
             </p>
             <div className="left_bottom">
-              <button id="more">Batafsil</button>
+              <Link id="more" to={"/product/ad1"}>
+                Batafsil
+              </Link>
               <div className="buttons">
                 <button className="adSlider_prev btn">
                   <IoIosArrowBack />
@@ -59,7 +62,9 @@ const AdSlider = () => {
               type specimen book.
             </p>
             <div className="left_bottom">
-              <button id="more">Batafsil</button>
+              <Link id="more" to={"/product/ad1"}>
+                Batafsil
+              </Link>
               <div className="buttons">
                 <button className="adSlider_prev btn">
                   <IoIosArrowBack />

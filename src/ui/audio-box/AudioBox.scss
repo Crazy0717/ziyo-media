@@ -1,0 +1,78 @@
+@use "../../constants/variables" as *;
+
+.audioBox {
+  //   max-width: 340px;
+  &_top {
+    position: relative;
+    &_blackbackground {
+      width: 100%;
+      height: 98%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 12px;
+      background: rgb(0, 0, 0);
+      z-index: 1;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 212, 255, 0.006127450980392135) 30%
+      );
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 20 / 13;
+      border-radius: 12px;
+    }
+    &_audio-count {
+      position: absolute;
+      bottom: 16px;
+      left: 20px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 23.12px;
+      color: #fff;
+      z-index: 2;
+    }
+  }
+  h5 {
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    color: $textColor;
+  }
+}
+
+@media screen and (width < 480px) {
+  .audioBox {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    h5 {
+      font-size: 18px;
+    }
+  }
+}
+@media screen and (479px < width < 650px) {
+  .audioBox {
+    h5 {
+      font-size: 16px;
+    }
+  }
+}
+@media screen and (649px < width < 900px) {
+  .audioBox {
+    h5 {
+      font-size: 18px;
+    }
+  }
+}
+@media screen and (899px < width < 1200px) {
+  .audioBox {
+    h5 {
+      font-size: 18px;
+    }
+  }
+}

@@ -13,6 +13,7 @@ import {
   QuadSlider,
   RadioSlider,
 } from "../../components"
+import { Link } from "react-router-dom"
 
 const Home = () => {
   return (
@@ -50,7 +51,9 @@ const Home = () => {
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </h2>
-              <button>Batafsil</button>
+              <Link to={"/product/video1"}>
+                <button>Batafsil</button>
+              </Link>
             </div>
             <div className="right">
               <VideoPlayer videoUrl="https://www.youtube-nocookie.com/embed/HO-r634Sq98?si=qIE5yRGBev1AwOAc" />
@@ -64,7 +67,9 @@ const Home = () => {
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </h2>
-              <button>Batafsil</button>
+              <Link to={"/product/video1"}>
+                <button>Batafsil</button>
+              </Link>
             </div>
             <div className="right">
               <VideoPlayer videoUrl="https://www.youtube-nocookie.com/embed/lppnmJDlAVg?si=r1JJzsp5f5m3Pvox" />

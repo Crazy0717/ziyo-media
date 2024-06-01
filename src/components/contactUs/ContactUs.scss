@@ -7,8 +7,8 @@
   align-items: start;
 }
 .contactUs_map {
-  max-width: 750px;
-  width: 720px;
+  max-width: 800px;
+  width: 800px;
   iframe {
     width: 100%;
     border-radius: 12px;
@@ -149,7 +149,6 @@
     width: 46%;
   }
 }
-
 @media screen and (1000px < width < 1200px) {
   .contactUs {
     padding: 0 60px 60px 60px;
@@ -160,7 +159,7 @@
 }
 @media screen and (1200px < width < 1400px) {
   .contactUs {
-    padding: 0 60px 60px 60px;
+    padding: 0 100px 60px 100px;
   }
   .contactUs_map {
     width: 56%;

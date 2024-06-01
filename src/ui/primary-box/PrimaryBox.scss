@@ -9,17 +9,17 @@
   border-radius: 12px;
   transition: $transitionDuration;
   cursor: pointer;
-
   &:hover {
     box-shadow: 0px 6px 18px 0px #00000014;
   }
   &_top {
     position: relative;
-
+    display: flex;
+    justify-content: center;
     span {
       position: absolute;
       top: 12px;
-      left: 12px;
+      left: 16px;
       padding: 4px 18px;
       border-radius: 12px;
       background-color: $primary;
@@ -38,6 +38,7 @@
       font-size: 14px;
     }
     img {
+      max-width: 260px;
       width: 100%;
       height: 100%;
       border-radius: 12px;
@@ -97,6 +98,17 @@
 
 @media screen and (width < 480px) {
   .primaryBox {
+    &_top {
+      span {
+        left: 10%;
+      }
+      .time {
+        right: 10%;
+      }
+      img {
+        max-width: 300px;
+      }
+    }
     &_content {
       max-width: 100%;
 
@@ -114,6 +126,33 @@
         display: flex;
         justify-content: space-between;
         gap: 0;
+      }
+    }
+  }
+}
+@media screen and (700px < width < 800px) {
+  .primaryBox {
+    &_top {
+      span {
+        left: 10%;
+      }
+      .time {
+        right: 10%;
+      }
+      img {
+        max-width: 300px;
+      }
+    }
+  }
+}
+@media screen and (1080px < width < 1300px) {
+  .primaryBox {
+    &_top {
+      span {
+        left: 10%;
+      }
+      .time {
+        right: 10%;
       }
     }
   }

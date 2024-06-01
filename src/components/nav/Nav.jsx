@@ -13,6 +13,7 @@ import { RxMagnifyingGlass } from "react-icons/rx"
 import { useDispatch } from "react-redux"
 import { enableSomeThing } from "../../redux/slices/states"
 import { BarsBlock, SearchBar } from ".."
+import { Link } from "react-router-dom"
 
 const Nav = () => {
   const dispatch = useDispatch()
@@ -23,33 +24,36 @@ const Nav = () => {
   }
 
   return (
-    <nav>
+    <nav className="navbar">
       <BarsBlock />
       <SearchBar />
       <div className="left">
         <div onClick={() => active("barsState")} className="bars">
           <HiBars3 />
         </div>
-        <div className="logo">
-          <img src="/images/ziyo logo.svg" alt="logo" />
-          <div className="logo_name">
-            <h2>ZIYO</h2>
-            <p>MEDIAMARKAZI</p>
+        <Link to="/">
+          <div className="logo">
+            <img src="/images/ziyo logo.svg" alt="logo" />
+            <div className="logo_name">
+              <h2>ZIYO</h2>
+              <p>MEDIAMARKAZI</p>
+            </div>
           </div>
-        </div>
+        </Link>
+
         <ul>
           <NavItem urlPath={"/"} name={"Asosiy"} icon={<GoHome />} />
           <NavItem
-            urlPath={"/videos"}
+            urlPath={"/categories/videos"}
             name={"Video"}
             icon={<HiOutlinePlay />}
           />
           <NavItem
-            urlPath={"/images"}
+            urlPath={"/photos"}
             name={"Fotolavhalar"}
             icon={<PiImageLight />}
           />
-          <NavItem urlPath={"/audio"} name={"Audio"} icon={<PiMusicNote />} />
+          <NavItem urlPath={"/audios"} name={"Audio"} icon={<PiMusicNote />} />
           <NavItem urlPath={"/messages"} name={"Xabarlar"} icon={<TbNews />} />
           <NavItem
             urlPath={"/articles"}
@@ -57,7 +61,7 @@ const Nav = () => {
             icon={<IoDocumentTextOutline />}
           />
           <NavItem
-            urlPath={"/about-ziyo"}
+            urlPath={"/product/about-ziyo"}
             name={"Ziyo haqida"}
             icon={
               <object
@@ -78,7 +82,7 @@ const Nav = () => {
             icon={<LuUserSquare />}
           />
           <NavItem
-            urlPath={"/purchases"}
+            urlPath={"/product/us-purchases"}
             name={"Xaridlar"}
             icon={<LiaHandshake />}
           />

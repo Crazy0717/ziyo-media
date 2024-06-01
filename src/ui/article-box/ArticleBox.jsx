@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom"
 import "./ArticleBox.scss"
 import { IoCalendarClearOutline, IoEyeOutline } from "react-icons/io5"
 
-const ArticleBox = ({ imagePath }) => {
+const ArticleBox = ({ item }) => {
   return (
-    <div className="articleBox">
+    <Link to={item.link} className="articleBox">
       <div className="articleBox_left">
-        <img src={imagePath} alt="there should be image" />
+        <img src={item.imagePath} alt="there should be image" />
       </div>
       <div className="articleBox_right">
         <div className="right_main">
@@ -27,7 +28,7 @@ const ArticleBox = ({ imagePath }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

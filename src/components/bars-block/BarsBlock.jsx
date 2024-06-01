@@ -37,27 +37,31 @@ const BarsBlock = () => {
       </div>
       <div className="content">
         <ul>
-          <NavLink className="link" to={"/"}>
+          <NavLink onClick={closeBars} className="link" to={"/"}>
             <GoHome />
             <p>Asosiy</p>
           </NavLink>
-          <NavLink className="link" to={"/videos"}>
+          <NavLink onClick={closeBars} className="link" to={"/videos"}>
             <PiImageLight />
             <p>Fotolavhalar</p>
           </NavLink>
-          <NavLink className="link" to={"/audio"}>
+          <NavLink onClick={closeBars} className="link" to={"/audio"}>
             <PiMusicNote />
             <p>Audio</p>
           </NavLink>
-          <NavLink className="link" to={"/messages"}>
+          <NavLink onClick={closeBars} className="link" to={"/messages"}>
             <TbNews />
             <p>Xabarlar</p>
           </NavLink>
-          <NavLink className="link" to={"/articles"}>
+          <NavLink onClick={closeBars} className="link" to={"/articles"}>
             <IoDocumentTextOutline />
             <p>Maqolalar</p>
           </NavLink>
-          <NavLink className="link" to={"/about-ziyo"}>
+          <NavLink
+            onClick={closeBars}
+            className="link"
+            to={"/product/about-ziyo"}
+          >
             <div className="wrap">
               <object
                 className="svg"
@@ -67,15 +71,19 @@ const BarsBlock = () => {
             </div>
             <p>Ziyo haqida</p>
           </NavLink>
-          <NavLink className="link" to={"/leadership"}>
+          <NavLink onClick={closeBars} className="link" to={"/leadership"}>
             <RiUserLine />
             <p>Rahbariyat</p>
           </NavLink>
-          <NavLink className="link" to={"/contacts"}>
+          <NavLink onClick={closeBars} className="link" to={"/contacts"}>
             <LuUserSquare />
             <p>Kontaktlar</p>
           </NavLink>
-          <NavLink className="link" to={"/purchases"}>
+          <NavLink
+            onClick={closeBars}
+            className="link"
+            to={"/product/us-purchases"}
+          >
             <LiaHandshake />
             <p>Xaridlar</p>
           </NavLink>

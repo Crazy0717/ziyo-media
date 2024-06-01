@@ -1,0 +1,70 @@
+@use "../../constants/variables" as *;
+
+.people {
+  padding: 30px 68px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background-color: #fff;
+  color: $textColor;
+  border-radius: 12px;
+}
+.people_top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  img {
+    width: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  h3 {
+    max-width: 130px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34.68px;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.23px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+}
+.people_bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.23px;
+    #icon {
+      font-size: 18px;
+      color: #b0babf;
+    }
+  }
+}
+
+@media screen and (width < 480px) {
+  .people {
+    padding: 20px 4vw;
+    max-width: 100%;
+  }
+}

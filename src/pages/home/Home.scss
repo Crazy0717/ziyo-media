@@ -49,6 +49,9 @@ header {
     align-items: center;
     background-color: #fff;
     border-radius: 18px;
+    &:active {
+      cursor: grabbing;
+    }
     .left {
       span {
         padding: 4px 18px;
@@ -93,6 +96,9 @@ header {
           background-color: $primaryClicked;
         }
       }
+    }
+    .right {
+      width: 46%;
     }
   }
 }
@@ -151,6 +157,13 @@ header {
           margin-top: 18px;
         }
       }
+      .right {
+        width: 120%;
+        height: 100% !important;
+        .videoPlayer {
+          padding-top: 0;
+        }
+      }
     }
   }
   .info {
@@ -193,6 +206,17 @@ header {
           margin-top: 18px;
         }
       }
+      .right {
+        width: 100%;
+        height: auto;
+        .videoPlayer {
+          padding: 0;
+          height: 50vw;
+          iframe {
+            height: 50vw;
+          }
+        }
+      }
     }
   }
   .info {
@@ -220,6 +244,7 @@ header {
       padding: 30px;
       .left {
         max-width: 400px;
+        width: 48%;
         p {
           margin: 12px 0 20px 0;
           font-size: 18px;
@@ -227,6 +252,17 @@ header {
         h2 {
           font-size: 32px;
           line-height: 42.02px;
+        }
+      }
+      .right {
+        width: 50%;
+        height: auto;
+        .videoPlayer {
+          padding: 0;
+          height: 29vw;
+          iframe {
+            height: 29vw;
+          }
         }
       }
     }
@@ -264,6 +300,17 @@ header {
         h2 {
           font-size: 32px;
           line-height: 42.02px;
+        }
+      }
+      .right {
+        width: 50%;
+        height: auto;
+        .videoPlayer {
+          padding: 0;
+          height: 29vw;
+          iframe {
+            height: 29vw;
+          }
         }
       }
     }

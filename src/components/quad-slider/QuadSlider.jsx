@@ -3,13 +3,16 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, A11y } from "swiper/modules"
 import { PrimaryBox } from "../../ui"
 import { IoIosArrowBack } from "react-icons/io"
+import { Link } from "react-router-dom"
 
 const QuadSlider = ({ title, ident }) => {
   return (
     <div className="quadSlider">
       <div className="quadSlider_top">
         <h2>{title}</h2>
-        <button>Barchasini ko’rish</button>
+        <Link to="/categories/videos">
+          <button>Barchasini ko’rish</button>
+        </Link>
       </div>
       <div className="quadSlider_content">
         <div className="buttons">
