@@ -63,13 +63,7 @@ const Nav = () => {
           <NavItem
             urlPath={"/product/about-ziyo"}
             name={"Ziyo haqida"}
-            icon={
-              <object
-                className="svg"
-                type="image/svg+xml"
-                data="/svg/navitem logo.svg"
-              ></object>
-            }
+            icon={<img src="/svg/navitem logo.svg" alt="" />}
           />
           <NavItem
             urlPath={"/leadership"}

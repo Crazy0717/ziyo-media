@@ -10,13 +10,14 @@
     .step {
       background-color: $primary;
     }
-    .svg {
+    img {
       height: 32px;
       width: 35px;
       filter: invert(100%);
+      z-index: 1;
     }
-    .icon:has(.svg) {
-      padding: 0px;
+    .icon:has(img) {
+      padding: 1px;
     }
   }
   .icon {
@@ -29,7 +30,7 @@
     align-items: center;
     justify-content: center;
     transition: 0.2s;
-    &:has(.svg) {
+    &:has(img) {
       padding: 1px;
     }
   }

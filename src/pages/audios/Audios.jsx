@@ -5,7 +5,7 @@ const Audios = () => {
   return (
     <div className="audios">
       <div className="audios_top">
-        <h1>Maqolalar</h1>
+        <h1>Audio maxsulotlar</h1>
       </div>
       <div className="audios_boxes">
         {mockData && mockData.map((item) => <AudioBox item={item} />)}

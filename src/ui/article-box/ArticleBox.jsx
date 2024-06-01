@@ -4,9 +4,9 @@ import { IoCalendarClearOutline, IoEyeOutline } from "react-icons/io5"
 
 const ArticleBox = ({ item }) => {
   return (
-    <Link to={item.link} className="articleBox">
+    <Link to={item?.link} className="articleBox">
       <div className="articleBox_left">
-        <img src={item.imagePath} alt="there should be image" />
+        <img src={item?.imagePath} alt="there should be image" />
       </div>
       <div className="articleBox_right">
         <div className="right_main">

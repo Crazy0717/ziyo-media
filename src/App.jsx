@@ -13,6 +13,7 @@ import {
 } from "./pages"
 import { Footer, Nav } from "./components"
 import { Background } from "./ui"
+// import Leadership from "./leadership/Leadership"
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/messages" element={<Messages />} />
       </Routes>
       <Footer />
+      {/* <Leadership /> */}
     </div>
   )
 }

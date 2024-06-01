@@ -13,13 +13,27 @@ const NewsBlock = () => {
         </Link>
       </div>
       <div className="newsBlock_content">
-        <ArticleBox imagePath="/images/Rectangle 12.png" />
-        <ArticleBox imagePath="/images/Rectangle 12 (1).png" />
-        <ArticleBox imagePath="/images/Rectangle 12 (2).png" />
-        <ArticleBox imagePath="/images/Rectangle 12.png" />
+        {mockData &&
+          mockData.map((item, i) => <ArticleBox key={i} item={item} />)}
       </div>
     </div>
   )
 }
 
 export default NewsBlock
+
+const mockData = [
+  {
+    imagePath: "/images/Rectangle 12.png",
+  },
+
+  {
+    imagePath: "/images/Rectangle 12 (1).png",
+  },
+  {
+    imagePath: "/images/Rectangle 12 (2).png",
+  },
+  {
+    imagePath: "/images/Rectangle 12.png",
+  },
+]

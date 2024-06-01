@@ -93,6 +93,9 @@ footer {
       a {
         transition: $transitionDuration;
         color: #fff;
+        &.active {
+          color: $primary;
+        }
       }
       &:hover {
         color: $primary;

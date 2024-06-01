@@ -41,11 +41,11 @@ const BarsBlock = () => {
             <GoHome />
             <p>Asosiy</p>
           </NavLink>
-          <NavLink onClick={closeBars} className="link" to={"/videos"}>
+          <NavLink onClick={closeBars} className="link" to={"/photos"}>
             <PiImageLight />
             <p>Fotolavhalar</p>
           </NavLink>
-          <NavLink onClick={closeBars} className="link" to={"/audio"}>
+          <NavLink onClick={closeBars} className="link" to={"/audios"}>
             <PiMusicNote />
             <p>Audio</p>
           </NavLink>

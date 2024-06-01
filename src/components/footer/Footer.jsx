@@ -40,25 +40,48 @@ const Footer = () => {
       <div className="footer_right">
         <ul>
           <h1>Videolavhalar</h1>
-          <li>Imom al buxoriy saboqlari</li>
-          <li>Imom al buxoriy saboqlari</li>
-          <li>Imom al buxoriy saboqlari</li>
-          <li>Imom al buxoriy saboqlari</li>
-          <li>Imom al buxoriy saboqlari</li>
-          <li>Imom al buxoriy saboqlari</li>
-          <li>Imom al buxoriy saboqlari</li>
-          <li>Imom al buxoriy saboqlari</li>
+          <li>
+            <NavLink to="/product/video1">Imom al buxoriy saboqlari</NavLink>
+          </li>
+          <li>
+            <NavLink to="/product/video1">Imom al buxoriy saboqlari</NavLink>
+          </li>
+          <li>
+            <NavLink to="/product/video1">Imom al buxoriy saboqlari</NavLink>
+          </li>
+          <li>
+            <NavLink to="/product/video1">Imom al buxoriy saboqlari</NavLink>
+          </li>
+          <li>
+            <NavLink to="/product/video1">Imom al buxoriy saboqlari</NavLink>
+          </li>
+          <li>
+            <NavLink to="/product/video1">Imom al buxoriy saboqlari</NavLink>
+          </li>
         </ul>
         <ul>
           <h1>Audiolavhalar</h1>
-          <li>Lorem ipsum</li>
-          <li>Lorem ipsum</li>
-          <li>Lorem ipsum</li>
-          <li>Lorem ipsum</li>
-          <li>Lorem ipsum</li>
-          <li>Lorem ipsum</li>
-          <li>Lorem ipsum</li>
-          <li>Lorem ipsum</li>
+          <li>
+            <NavLink to="/product/audio1">Lorem ipsum</NavLink>
+          </li>
+          <li>
+            <NavLink to="/product/audio1">Lorem ipsum</NavLink>
+          </li>
+          <li>
+            <NavLink to="/product/audio1">Lorem ipsum</NavLink>
+          </li>
+          <li>
+            <NavLink to="/product/audio1">Lorem ipsum</NavLink>
+          </li>
+          <li>
+            <NavLink to="/product/audio1">Lorem ipsum</NavLink>
+          </li>
+          <li>
+            <NavLink to="/product/audio1">Lorem ipsum</NavLink>
+          </li>
+          <li>
+            <NavLink to="/product/audio1">Lorem ipsum</NavLink>
+          </li>
         </ul>
         <ul>
           <h1>Boshqalar</h1>
