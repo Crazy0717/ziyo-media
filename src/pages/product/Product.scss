@@ -188,11 +188,9 @@ $padding-x: 30px;
     &::-webkit-media-controls-panel {
       background-color: #fff;
     }
-    &::-webkit-media-controls-play-button{
+    &::-webkit-media-controls-play-button {
       background-color: $primary;
       border-radius: 50%;
-      color: red;
-      
     }
   }
 }

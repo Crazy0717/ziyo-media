@@ -9,12 +9,17 @@
   }
 }
 .adSlider-slide {
+  padding-bottom: 4px;
+  min-height: 150px;
   display: flex;
   justify-content: space-between;
   gap: 60px;
   background-color: #fff;
   .adSlider_left {
     color: $textColor;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     h4 {
       font-size: 32px;
       font-weight: 700;
