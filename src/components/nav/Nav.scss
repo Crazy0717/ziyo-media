@@ -56,15 +56,19 @@ $padding-y: 0px;
       align-items: center;
       gap: 4px;
       font-size: 26px;
+      div {
+        display: flex;
+        gap: 5px;
+      }
       p {
         display: flex;
         gap: 4px;
         font-size: 13px;
         font-weight: 400;
         line-height: 23.12px;
-        span {
-          opacity: 0.5;
-          z-index: -1;
+        cursor: pointer;
+        &.active{
+          color: $primary;
         }
       }
       #current {

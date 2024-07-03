@@ -5,13 +5,13 @@ import { PrimaryBox } from "../../ui"
 import { IoIosArrowBack } from "react-icons/io"
 import { Link } from "react-router-dom"
 
-const QuadSlider = ({ title, ident }) => {
+const QuadSlider = ({ title, ident, btnText }) => {
   return (
     <div className="quadSlider">
       <div className="quadSlider_top">
         <h2>{title}</h2>
         <Link to="/categories/videos">
-          <button>Barchasini ko’rish</button>
+          <button>{btnText}</button>
         </Link>
       </div>
       <div className="quadSlider_content">
@@ -75,25 +75,45 @@ const mockData = [
     imagePath: "/images/Rectangle 12.png",
     time: "10:32",
     badge: "video",
+    author: "IMOM Al Buxoriy o’g’itlari",
+    title: "Lorem Ipsum is simply dummy",
+    viewCount: "1000",
+    date: "16.12.2024 18:09",
   },
   {
     imagePath: "/images/Rectangle 12 (1).png",
     time: "7:11",
     badge: "audio",
+    author: "IMOM Al Buxoriy o’g’itlari",
+    title: "Lorem Ipsum is simply dummy",
+    viewCount: "1000",
+    date: "16.12.2024 18:09",
   },
   {
     imagePath: "/images/Rectangle 12 (2).png",
     time: "10:48",
     badge: "foto",
+    author: "IMOM Al Buxoriy o’g’itlari",
+    title: "Lorem Ipsum is simply dummy Lorem Ipsum is simply dummy",
+    viewCount: "1000",
+    date: "16.12.2024 18:09",
   },
   {
     imagePath: "/images/Rectangle 12.png",
     time: "7:42",
     badge: "video",
+    author: "IMOM Al Buxoriy o’g’itlari",
+    title: "Lorem Ipsum is simply dummy",
+    viewCount: "1000",
+    date: "16.12.2024 18:09",
   },
   {
     imagePath: "/images/Rectangle 12 (1).png",
     time: "22:58",
     badge: "audio",
+    author: "IMOM Al Buxoriy o’g’itlari",
+    title: "Lorem Ipsum is simply dummy",
+    viewCount: "1000",
+    date: "16.12.2024 18:09",
   },
 ]

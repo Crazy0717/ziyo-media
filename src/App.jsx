@@ -8,11 +8,13 @@ import {
   Leadership,
   Messages,
   News,
+  PageNotFound,
   Photos,
   Product,
 } from "./pages"
 import { Footer, Nav } from "./components"
 import { Background } from "./ui"
+import "./utils/i18n/i18n"
 
 function App() {
   return (
@@ -30,6 +32,7 @@ function App() {
         <Route path="/audios" element={<Audios />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/messages" element={<Messages />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </div>

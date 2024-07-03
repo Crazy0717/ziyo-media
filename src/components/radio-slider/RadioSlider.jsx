@@ -1,12 +1,12 @@
 import { RadioBox } from "../../ui"
 import "./RadioSlider.scss"
 
-const RadioSlider = () => {
+const RadioSlider = ({title, btnText}) => {
   return (
     <div className="radioSlider">
       <div className="radioSlider_top">
-        <h2>Radiolar</h2>
-        <button>Barchasini ko’rish</button>
+        <h2>{title}</h2>
+        <button>{btnText}</button>
       </div>
       <div className="radioSlider_content">
         <RadioBox />

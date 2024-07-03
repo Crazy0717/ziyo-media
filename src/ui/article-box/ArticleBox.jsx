@@ -10,21 +10,18 @@ const ArticleBox = ({ item }) => {
       </div>
       <div className="articleBox_right">
         <div className="right_main">
-          <h6>Lorem Ipsum is simply dummy</h6>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
+          <h6>{item.title}</h6>
+          <p>{item.description}</p>
         </div>
 
         <div className="right_bottom">
           <div className="bottom_stats">
             <IoEyeOutline id="icon" />
-            <p>1000</p>
+            <p>{item.viewCount}</p>
           </div>
           <div className="bottom_stats">
             <IoCalendarClearOutline id="icon" />
-            <p>16.12.2022 1:09</p>
+            <p>{item.date}</p>
           </div>
         </div>
       </div>

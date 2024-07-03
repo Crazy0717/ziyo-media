@@ -4,8 +4,11 @@ import { NavLink } from "react-router-dom"
 import { RiInstagramFill } from "react-icons/ri"
 import { BsYoutube } from "react-icons/bs"
 import { ImTelegram } from "react-icons/im"
+import { useTranslation } from "react-i18next"
 
 const Footer = () => {
+  const { t } = useTranslation()
+
   return (
     <footer>
       <div className="footer_left">
@@ -13,23 +16,23 @@ const Footer = () => {
           <img src="/images/ziyo logo.svg" alt="logo" />
           <div className="logo_name">
             <h2>ZIYO</h2>
-            <p>MEDIAMARKAZI</p>
+            <p>{t("mediaCenter")}</p>
           </div>
         </div>
         <div className="left_contacts">
           <div className="floor">
-            <p>Aloqa:</p>
+            <p>{t("contact")}:</p>
             <h6>
               <FaPhone id="icon" />
               +998 88 330 06 66
             </h6>
           </div>
           <div className="floor">
-            <p>Ro’yxatdan o’tgan manzil:</p>
+            <p>{t("registerdAddress")}:</p>
             <h6>Toshkent shahri, Yunusobot tumani Ahmad Donish 11-mavze, 60</h6>
           </div>
           <div className="floor">
-            <p>Shikoyatlar uchun:</p>
+            <p>{t("forComplaints")}:</p>
             <h6>+998 99 342 10 09</h6>
           </div>
         </div>
@@ -39,7 +42,7 @@ const Footer = () => {
       </div>
       <div className="footer_right">
         <ul>
-          <h1>Videolavhalar</h1>
+          <h1>{t("videos")}</h1>
           <li>
             <NavLink to="/product/video1">Imom al buxoriy saboqlari</NavLink>
           </li>
@@ -60,7 +63,7 @@ const Footer = () => {
           </li>
         </ul>
         <ul>
-          <h1>Audiolavhalar</h1>
+          <h1>{t("audios")}</h1>
           <li>
             <NavLink to="/product/audio1">Lorem ipsum</NavLink>
           </li>
@@ -84,55 +87,54 @@ const Footer = () => {
           </li>
         </ul>
         <ul>
-          <h1>Boshqalar</h1>
+          <h1>{t("others")}</h1>
           <li>
-            <NavLink to={"/photos"}>Fotolavhalar</NavLink>
+            <NavLink to={"/photos"}>{t("navPhoto")}</NavLink>
           </li>
           <li>
-            <NavLink to={"/messages"}>Xabarlar</NavLink>
+            <NavLink to={"/messages"}>{t("news")}</NavLink>
           </li>
           <li>
-            <NavLink to={"/product/about-ziyo"}>Ziyo haqida</NavLink>
+            <NavLink to={"/product/about-ziyo"}>{t("navAboutZiyo")}</NavLink>
           </li>
           <li>
-            <NavLink to={"/contacts"}>Kontaktlar</NavLink>
+            <NavLink to={"/contacts"}>{t("contacts")}</NavLink>
           </li>
           <li>
-            <NavLink to={"/product/policy"}>Foydalanish shartlari</NavLink>
+            <NavLink to={"/product/policy"}>{t("termsOfUse")}</NavLink>
           </li>
           <li>
-            <NavLink to={"/product/policy"}>Maxfiylik siyosati</NavLink>
+            <NavLink to={"/product/policy"}>{t("privacyPolicy")}</NavLink>
           </li>
         </ul>
         <ul className="socialLinks">
-          <h1>Ijtimoiy tarmoqlar</h1>
+          <h1>{t("socialMedias")}</h1>
           <li>
-            <NavLink to="/">
+            <NavLink to="https://www.instagram.com/">
               <RiInstagramFill />
               Instagram
             </NavLink>
           </li>
           <li>
-            <NavLink to="/">
+            <NavLink to="https://web.telegram.org/a/">
               <ImTelegram />
               Telegram
             </NavLink>
           </li>
           <li>
-            <NavLink to="/">
+            <NavLink to="https://www.youtube.com/">
               <BsYoutube />
               Youtube
             </NavLink>
           </li>
           <li>
-            <NavLink to="/">
+            <NavLink to="https://www.facebook.com/?locale=ru_RU">
               <FaFacebook />
               Facebook
             </NavLink>
           </li>
-
           <li>
-            <NavLink to="/">
+            <NavLink to="https://x.com/">
               <FaTwitter />
               Twitter
             </NavLink>

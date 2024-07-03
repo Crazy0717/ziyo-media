@@ -1,0 +1,49 @@
+{
+  "mediaCenter": "МЕДИА ЦЕНТР",
+  "search": "Поиск",
+  "navHome": "Главная",
+  "navVideo": "Видео",
+  "navPhoto": "Фотогалереи",
+  "navArticles": "Статьи",
+  "navAboutZiyo": "О Зиё",
+  "navManagement": "Руководство",
+  "navContacts": "Контакты",
+  "navPurchases": "Покупки",
+
+  "headerRes1": " Высказывания Имама Аль Бухари",
+  "radios": "Радио",
+  "headerVideosCount": "Видео продукты",
+  "audioProducts": "Аудио продукты",
+  "headerPhotosCount": "Фотографии",
+
+  "more": "Подробно",
+  "badgeVideo": "Видео",
+  "seeAll": "Увидеть все",
+
+  "news": "Новости",
+
+  "mainbuxariy1": "Уроки Имама аль-Бухари",
+  "adTitle1": "Открываются курсы Корана для слепых!",
+  "quadSlider1": "Это может быть интересно",
+
+  "ourPartners": "Наши партнеры",
+  "contactsUs": "Связаться с нами",
+  "phoneNumber": "Ваш номер телефона",
+  "nameSurname": "Имя и фамилия",
+  "enterName": "Введите ваше имя",
+  "comment": "Комментарий (необязательно)",
+  "yourComment": "Ваш комментарий",
+  "send": "Отправить",
+
+  "contact": "Контакт",
+  "registerdAddress": "Зарегистрированный адрес",
+  "forComplaints": "Для жалоб",
+
+  "videos": "Видео",
+  "audios": "Аудиофайлы",
+  "others": "Другое",
+  "contacts": "Контакты",
+  "termsOfUse": "Условия использования",
+  "privacyPolicy": "Политика конфиденциальности",
+  "socialMedias": "Социальные сети"
+}

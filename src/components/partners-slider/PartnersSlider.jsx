@@ -3,11 +3,11 @@ import { IoIosArrowBack } from "react-icons/io"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, A11y } from "swiper/modules"
 
-const PartnersSlider = () => {
+const PartnersSlider = ({title}) => {
   return (
     <div className="partnersSlider">
       <div className="partnersSlider_top">
-        <h2>Bizning hamkorlar</h2>
+        <h2>{title}</h2>
         <div className="buttons">
           <button className="partnersSlider_prev btn">
             <IoIosArrowBack />

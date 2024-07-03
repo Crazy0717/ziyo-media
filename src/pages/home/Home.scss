@@ -43,7 +43,7 @@ header {
     background-color: #fff;
   }
   .swiper-slide {
-    padding: 50px 50px 50px 70px;
+    padding: 50px 50px 20px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,7 +98,10 @@ header {
       }
     }
     .right {
-      width: 46%;
+      width: 50%;
+      .videoPlayer {
+        padding-top: 61%;
+      }
     }
   }
 }

@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next"
 import "./ContactUs.scss"
 
 const ContactUs = () => {
+  const { t } = useTranslation()
+
   return (
     <div className="contactUs">
       <div className="contactUs_map">
@@ -14,20 +17,20 @@ const ContactUs = () => {
         ></iframe>
       </div>
       <form className="contactUs_form">
-        <h3>Biz bilan aloqa</h3>
+        <h3>{t("contactsUs")}</h3>
         <div className="input">
-          <label htmlFor="number">Telefon raqamingiz</label>
+          <label htmlFor="number">{t("phoneNumber")}</label>
           <input id="number" type="text" defaultValue="+998" />
         </div>
         <div className="input">
-          <label htmlFor="name">Ism va familiya</label>
-          <input id="name" type="text" placeholder="Ismingizni kiriting" />
+          <label htmlFor="name">{t("nameSurname")}</label>
+          <input id="name" type="text" placeholder={t("enterName")} />
         </div>
         <div className="input">
-          <label htmlFor="comment">Izoh (ixtiyoriy)</label>
-          <input id="comment" type="text" placeholder="Izohingiz" />
+          <label htmlFor="comment">{t("comment")}</label>
+          <input id="comment" type="text" placeholder={t("yourComment")} />
         </div>
-        <button type="submit">Yuborish</button>
+        <button type="submit">{t("send")}</button>
       </form>
     </div>
   )

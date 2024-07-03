@@ -1,0 +1,49 @@
+{
+  "mediaCenter": "MEDIA MARKAZI",
+  "search": "Qidiruv",
+  "navHome": "Asosiy",
+  "navVideo": "Video",
+  "navPhoto": "Fotolavhalar",
+  "navArticles": "Maqolalar",
+  "navAboutZiyo": "Ziyo haqida",
+  "navManagement": "Rahbariyat",
+  "navContacts": "Kontaktlar",
+  "navPurchases": "Xaridlar",
+
+  "headerRes1": "IMOM Al Buxoriy o’gitlari",
+  "radios": "Radiolar",
+  "headerVideosCount": "Video mahsulotlar",
+  "audioProducts": "Audio mahsulotlar",
+  "headerPhotosCount": "Fotolavhalar",
+
+  "more": "Batafsil",
+  "badgeVideo": "Video",
+  "seeAll": "Barchasini ko’rish",
+
+  "news": "Xabarlar",
+
+  "mainbuxariy1": "Imom al buxoriy saboqlari",
+  "adTitle1": "Ko’zi ojizlar uchun Quron kurslari ochilmoqda!",
+  "quadSlider1": "Qiziq bo’lishi mumkin",
+
+  "ourPartners": "Bizning hamkorlar",
+  "contactsUs": "Biz bilan aloqa",
+  "phoneNumber": "Telefon raqamingiz",
+  "nameSurname": "Ism va familiya",
+  "enterName": "Ismingizni kiriting",
+  "comment": "Izoh (ixtiyoriy)",
+  "yourComment": "Izohingiz",
+  "send": "Yuborish",
+
+  "contact": "Aloqa",
+  "registerdAddress": "Ro’yxatdan o’tgan manzil",
+  "forComplaints":  "Shikoyatlar uchun",
+
+  "videos": "Videolavhalar", 
+  "audios": "Audiolavhalar", 
+  "others": "Boshqalar", 
+  "contacts": "Kontaktlar", 
+  "termsOfUse": "Terms of use",
+  "privacyPolicy":"Privacy Policy", 
+  "socialMedias":"Ijtimoiy tarmoqlar"
+}

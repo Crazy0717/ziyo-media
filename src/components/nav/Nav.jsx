@@ -14,14 +14,32 @@ import { useDispatch } from "react-redux"
 import { enableSomeThing } from "../../redux/slices/states"
 import { BarsBlock, SearchBar } from ".."
 import { Link } from "react-router-dom"
+import { useTranslation } from "react-i18next"
+import { useEffect, useState } from "react"
 
 const Nav = () => {
+  const { t, i18n } = useTranslation()
   const dispatch = useDispatch()
+  const [currentLng, setCurrentLng] = useState(i18n.language)
 
   const active = (stateName) => {
     dispatch(enableSomeThing("backgroundState"))
     dispatch(enableSomeThing(stateName))
   }
+
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language)
+  }
+  useEffect(() => {
+    const handleLanguageChanged = () => {
+      setCurrentLng(i18n.language)
+    }
+
+    i18n.on("languageChanged", handleLanguageChanged)
+    return () => {
+      i18n.off("languageChanged", handleLanguageChanged)
+    }
+  }, [i18n])
 
   return (
     <nav className="navbar">
@@ -36,48 +54,48 @@ const Nav = () => {
             <img src="/images/ziyo logo.svg" alt="logo" />
             <div className="logo_name">
               <h2>ZIYO</h2>
-              <p>MEDIAMARKAZI</p>
+              <p>{t("mediaCenter")}</p>
             </div>
           </div>
         </Link>
 
         <ul>
-          <NavItem urlPath={"/"} name={"Asosiy"} icon={<GoHome />} />
+          <NavItem urlPath={"/"} name={t("navHome")} icon={<GoHome />} />
           <NavItem
             urlPath={"/categories/videos"}
-            name={"Video"}
+            name={t("navVideo")}
             icon={<HiOutlinePlay />}
           />
           <NavItem
             urlPath={"/photos"}
-            name={"Fotolavhalar"}
+            name={t("navPhoto")}
             icon={<PiImageLight />}
           />
           <NavItem urlPath={"/audios"} name={"Audio"} icon={<PiMusicNote />} />
           <NavItem urlPath={"/messages"} name={"Xabarlar"} icon={<TbNews />} />
           <NavItem
             urlPath={"/articles"}
-            name={"Maqolalar"}
+            name={t("navArticles")}
             icon={<IoDocumentTextOutline />}
           />
           <NavItem
             urlPath={"/product/about-ziyo"}
-            name={"Ziyo haqida"}
+            name={t("navAboutZiyo")}
             icon={<img src="/svg/navitem logo.svg" alt="" />}
           />
           <NavItem
             urlPath={"/leadership"}
-            name={"Rahbariyat"}
+            name={t("navManagement")}
             icon={<RiUserLine />}
           />
           <NavItem
             urlPath={"/contacts"}
-            name={"Kontaktlar"}
+            name={t("navContacts")}
             icon={<LuUserSquare />}
           />
           <NavItem
             urlPath={"/product/us-purchases"}
-            name={"Xaridlar"}
+            name={t("navPurchases")}
             icon={<LiaHandshake />}
           />
         </ul>
@@ -85,13 +103,30 @@ const Nav = () => {
       <div className="right">
         <div className="language">
           <TiGlobeOutline />
-          <p>
-            <b id="current">UZ</b> <span>|</span> RU <span>|</span> ENG
-          </p>
+          <div>
+            <p
+              className={currentLng === "uz" ? "active" : ""}
+              onClick={() => changeLanguage("uz")}
+            >
+              UZ
+            </p>
+            <p
+              className={currentLng === "en" ? "active" : ""}
+              onClick={() => changeLanguage("en")}
+            >
+              ENG
+            </p>
+            <p
+              className={currentLng === "ru" ? "active" : ""}
+              onClick={() => changeLanguage("ru")}
+            >
+              RU
+            </p>
+          </div>
         </div>
         <div onClick={() => active("searchState")} className="search">
           <RxMagnifyingGlass />
-          <p>Qidiruv</p>
+          <p>{t("search")}</p>
         </div>
       </div>
     </nav>

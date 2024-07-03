@@ -9,6 +9,7 @@
   border-radius: 12px;
   transition: $transitionDuration;
   cursor: pointer;
+
   &:hover {
     box-shadow: 0px 6px 18px 0px #00000014;
   }
@@ -26,6 +27,9 @@
       color: #fff;
       font-size: 14px;
       text-transform: capitalize;
+      &:empty {
+        display: none;
+      }
     }
     .time {
       position: absolute;
@@ -69,7 +73,7 @@
       line-height: 26px;
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 1;
       overflow: hidden;
     }
     .right_bottom {

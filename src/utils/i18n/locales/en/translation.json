@@ -1,0 +1,49 @@
+{
+  "mediaCenter": "MEDIA CENTER",
+  "search": "Search",
+  "navHome": "Home",
+  "navVideo": "Video",
+  "navPhoto": "Photo galleries",
+  "navArticles": "Articles",
+  "navAboutZiyo": "About Ziyo",
+  "navManagement": "Management",
+  "navContacts": "Contacts",
+  "navPurchases": "Purchases",
+
+  "headerRes1": "The sayings of Imam Al Bukhari",
+  "radios": "Radios",
+  "headerVideosCount": "Video Products",
+  "audioProducts": "Audio products",
+  "headerPhotosCount": "Photographs",
+
+  "more": "More",
+  "badgeVideo": "Video",
+  "seeAll": "See all",
+
+  "news": "News",
+
+  "mainbuxariy1": "Lessons of Imam al-Bukhari",
+  "adTitle1": "Koran courses for the blind are opening!",
+  "quadSlider1": "It might be interesting",
+
+  "ourPartners": "Our partners",
+  "contactsUs": "Contact us",
+  "phoneNumber": "Your phone number",
+  "nameSurname": "Name and surname",
+  "enterName": "Enter your name",
+  "comment": "Comment (optional)",
+  "yourComment": "Your comment",
+  "send": "Send",
+
+  "contact": "Contact",
+  "registerdAddress": "Registered address",
+  "forComplaints": "For complaints",
+
+  "videos": "Videos",
+  "audios": "Audio files",
+  "others": "Others",
+  "contacts": "Contacts",
+  "termsOfUse": "Terms of use",
+  "privacyPolicy": "Privacy Policy",
+  "socialMedias": "Social media"
+}

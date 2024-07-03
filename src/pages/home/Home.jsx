@@ -1,10 +1,9 @@
-import "./Home.scss"
 import { Navigation, A11y } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import { IoIosArrowBack } from "react-icons/io"
-import { VideoPlayer } from "../../ui"
+import { Counter, VideoPlayer } from "../../ui"
 import {
   AdSlider,
   ContactUs,
@@ -14,8 +13,12 @@ import {
   RadioSlider,
 } from "../../components"
 import { Link } from "react-router-dom"
+import "./Home.scss"
+import { useTranslation } from "react-i18next"
 
 const Home = () => {
+  const { t } = useTranslation()
+
   return (
     <div className="home">
       <header>
@@ -45,14 +48,14 @@ const Home = () => {
         >
           <SwiperSlide>
             <div className="left">
-              <span>Video</span>
-              <p>IMOM Al Buxoriy o’g’itlari</p>
+              <span>{t("badgeVideo")}</span>
+              <p>{t("headerRes1")}</p>
               <h2>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </h2>
               <Link to={"/product/video1"}>
-                <button>Batafsil</button>
+                <button>{t("more")}</button>
               </Link>
             </div>
             <div className="right">
@@ -61,14 +64,14 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="left">
-              <span>Video</span>
-              <p>IMOM Al Buxoriy o’g’itlari</p>
+              <span>{t("badgeVideo")}</span>
+              <p>{t("headerRes1")}</p>
               <h2>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </h2>
               <Link to={"/product/video1"}>
-                <button>Batafsil</button>
+                <button>{t("more")}</button>
               </Link>
             </div>
             <div className="right">
@@ -80,36 +83,40 @@ const Home = () => {
       <div className="info">
         <div className="box">
           <h3>
-            20<span>+</span>
+            <Counter end={20} interval={45} />
+            <span>+</span>
           </h3>
-          Radiolar
+          {t("radios")}
         </div>
         <div className="box">
           <h3>
-            200<span>+</span>
+            <Counter end={200} interval={1} />
+            <span>+</span>
           </h3>
-          Video mahsulotlar
+          {t("headerVideosCount")}
         </div>
         <div className="box">
           <h3>
-            232<span>+</span>
+            <Counter end={232} interval={1} />
+            <span>+</span>
           </h3>
-          Audio mahsulotlar
+          {t("audioProducts")}
         </div>
         <div className="box">
           <h3>
-            89<span>+</span>
+            <Counter end={89} interval={15} />
+            <span>+</span>
           </h3>
-          Fotolavhalar
+          {t("headerPhotosCount")}
         </div>
       </div>
-      <NewsBlock />
-      <QuadSlider ident="first" title="Imom al buxoriy saboqlari" />
+      <NewsBlock title={t("news")} />
+      <QuadSlider ident="first" title={t("mainbuxariy1")} />
       <AdSlider />
-      <RadioSlider />
-      <QuadSlider ident="second" title="Qiziq bo’lishi mumkin" />
-      <QuadSlider ident="third" title="Audio maxsulotlar" />
-      <PartnersSlider />
+      <RadioSlider title={t("radios")} btnText={t("seeAll")}/>
+      <QuadSlider ident="second" title={t("quadSlider1")} btnText={t("seeAll")}/>
+      <QuadSlider ident="third" title={t("audioProducts")} />
+      <PartnersSlider title={t("ourPartners")} />
       <ContactUs />
     </div>
   )

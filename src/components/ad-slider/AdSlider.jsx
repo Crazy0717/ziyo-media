@@ -4,8 +4,11 @@ import { Navigation, A11y, EffectFade } from "swiper/modules"
 import { IoIosArrowBack } from "react-icons/io"
 import "swiper/css/effect-fade"
 import { Link } from "react-router-dom"
+import { useTranslation } from "react-i18next"
 
 const AdSlider = () => {
+  const { t } = useTranslation()
+
   return (
     <div className="adSlider">
       <Swiper
@@ -22,7 +25,7 @@ const AdSlider = () => {
       >
         <SwiperSlide className="adSlider-slide">
           <div className="adSlider_left">
-            <h4>Ko’zi ojizlar uchun Quron kurslari ochilmoqda!</h4>
+            <h4>{t("adTitle1")}</h4>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -31,7 +34,7 @@ const AdSlider = () => {
             </p>
             <div className="left_bottom">
               <Link id="more" to={"/product/ad1"}>
-                Batafsil
+                {t("more")}
               </Link>
               <div className="buttons">
                 <button className="adSlider_prev btn">
@@ -63,7 +66,7 @@ const AdSlider = () => {
             </p>
             <div className="left_bottom">
               <Link id="more" to={"/product/ad1"}>
-                Batafsil
+                {t("more")}
               </Link>
               <div className="buttons">
                 <button className="adSlider_prev btn">
